@@ -16,6 +16,7 @@ def get_ip_info(ip_address):
         data = response.json()
         AS = data.get('as', 'пусто')
         country = data.get('country', 'пусто')
+
         provider = data.get('org', 'пусто')
         return {'Country': country, 'AS': AS, 'Provider': provider}
     else:
